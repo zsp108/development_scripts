@@ -22,5 +22,7 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
-      - name: exec install
+#       - name: exec install
+#         run: |
+        
       
