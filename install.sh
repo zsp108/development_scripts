@@ -140,7 +140,7 @@ function install::go(){
   mv $HOME/go/go $HOME/go/go$go_version
 
   # 配置 Go 环境变量
-  cat << 'EOF' >> $HOME/.bashrc
+  cat << "EOF" >> $HOME/.bashrc
 # Go envs
 export GOVERSION=go$go_version # Go 版本设置
 export GO_INSTALL_DIR=$HOME/go # Go 安装目录
