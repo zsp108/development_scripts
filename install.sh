@@ -76,10 +76,10 @@ EOF
 install::lib() {
     if [[ "$OSTYPE" == 'debian' ]];then
         apt-get update -y
-        apt-get -y wget install make autoconf automake cmake libtool gcc zlib1g-dev tcl-dev git-lfs telnet ctags lrzsz jq openssl expat dh-autoreconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev libghc-zlib-dev libprotoc-dev
+        apt-get install -y  wget make autoconf automake cmake libtool gcc zlib1g-dev tcl-dev git-lfs telnet ctags lrzsz jq openssl expat dh-autoreconf libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev libghc-zlib-dev libprotoc-dev
     elif [[ "$OSTYPE" == 'redhat' ]];then
         yum update -y
-        yum -y wget install make autoconf automake cmake perl-CPAN libcurl-devel libtool gcc gcc-c++ glibc-headers zlib-devel git-lfs telnet ctags lrzsz jq expat-devel openssl-devel
+        yum install -y wget make autoconf automake cmake perl-CPAN libcurl-devel libtool gcc gcc-c++ glibc-headers zlib-devel git-lfs telnet ctags lrzsz jq expat-devel openssl-devel
     fi
 }
 
