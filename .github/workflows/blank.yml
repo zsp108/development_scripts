@@ -25,6 +25,6 @@ jobs:
         
       - name: exec install
         run: |
-          echo -e "y" | ./install.sh
+          echo -e "y\n\n" | ./install.sh
         
       
