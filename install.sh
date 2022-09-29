@@ -173,6 +173,7 @@ case $auto_install in
         install::lib
 	install::git
 	install::go
+	exit 0
         ;;
 esac
 
