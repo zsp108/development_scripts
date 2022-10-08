@@ -166,16 +166,16 @@ EOF
 get::ostype
 echo "当前脚本运行环境为: $OSTYPE"
 
-read -p "自动安装(Y/N):" auto_install
-case $auto_install in
-    "y")
-    	init::bashrc
-        install::lib
-	install::git
-	install::go
-	exit 0
-        ;;
-esac
+# read -p "自动安装(Y/N):" auto_install
+# case $auto_install in
+#     "y")
+#     	init::bashrc
+#         install::lib
+# 	install::git
+# 	install::go
+# 	exit 0
+#         ;;
+# esac
 
 
 read -n1 -p "是否为新服务器需要进行~/.bashrc 初始化和基础依赖安装? (y/n): " IS_BASH
