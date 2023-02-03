@@ -12,4 +12,5 @@ cd $SCRIPT_ROOT/installs
 # ./git.sh < $SCRIPT_ROOT/test/git_test.data
 # source ~/.bashrc && git config --global --list
 ./go.sh < $SCRIPT_ROOT/test/go_test.data
+source ~/.bashrc && go version 
 ./python.sh < $SCRIPT_ROOT/test/python_test.data
