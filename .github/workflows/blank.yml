@@ -28,7 +28,7 @@ jobs:
           cd installs && ./env_setting.sh \
           && ./git.sh \
           && ./go.sh \
-          && ./pythom.sh \
+          && ./pythom.sh 
           
         
       
