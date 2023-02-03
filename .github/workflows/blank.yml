@@ -1,0 +1,35 @@
+
+name: development tools install
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+
+
+jobs:
+  ubtest:
+    name: ubtest
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+      - name: exec install
+        run: |
+          cd installs
+          ./env_setting.sh
+          ./git.sh
+          ./go.sh
+          ./pythom.sh
+          
+        
+      
