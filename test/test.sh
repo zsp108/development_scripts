@@ -8,6 +8,7 @@ ls
 echo "$SCRIPT_ROOT/installs"
 cd $SCRIPT_ROOT/installs
 ./env_setting.sh < $SCRIPT_ROOT/test/env_setting.data
+echo ~/.bashrc
 # ./git.sh
 # ./go.sh
 ./python.sh < $SCRIPT_ROOT/test/python_test.data
