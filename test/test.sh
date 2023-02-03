@@ -9,6 +9,7 @@ echo "$SCRIPT_ROOT/installs"
 cd $SCRIPT_ROOT/installs
 ./env_setting.sh < $SCRIPT_ROOT/test/env_setting.data
 cat ~/.bashrc
-# ./git.sh
+./git.sh < $SCRIPT_ROOT/test/git_test.data
+source ~/.bashrc && git config --global --list
 # ./go.sh
 ./python.sh < $SCRIPT_ROOT/test/python_test.data
