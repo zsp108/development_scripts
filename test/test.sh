@@ -7,7 +7,7 @@ SCRIPT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
 ls
 echo "$SCRIPT_ROOT/installs"
 cd $SCRIPT_ROOT/installs
-./env_setting.sh
+./env_setting.sh < $SCRIPT_ROOT/test/env_setting.data
 # ./git.sh
 # ./go.sh
 ./python.sh < $SCRIPT_ROOT/test/python_test.data
