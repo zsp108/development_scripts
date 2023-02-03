@@ -25,7 +25,7 @@ jobs:
         
       - name: exec install
         run: |
-          ./test.sh
+          cd test && ./test.sh
           
         
       

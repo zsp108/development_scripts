@@ -2,4 +2,5 @@
 
 # Copyright 2020 SP Zhang <echo996@foxmail.com>. All rights reserved.
 
-echo "1"
+read -p "ces" test_name
+echo $test_name
