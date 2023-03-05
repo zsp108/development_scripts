@@ -15,9 +15,9 @@ source "${SCRIPT_ROOT}/common/logging.sh"
 function get_ostype() {
     declare -g OSNAME
     if [[ -f /etc/redhat-release ]];then
-        OSTYPE='redhat'
+        OSNAME='redhat'
     elif [[ -f /etc/lsb-release ]];then
-        OSTYPE='debian'
+        OSNAME='debian'
     fi
     # echo "$OSNAME"
 }
