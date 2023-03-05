@@ -33,7 +33,7 @@ install_git(){
             read -p "是否删除已安装的git$cur_gitversion？(y/n):" is_del_git
  
             if [[ $is_del_git == 'y' ]];then
-                case $OSTYPE in
+                case $OSNAME in
                     'redhat')
                         yum remove git -y
                         ;;
