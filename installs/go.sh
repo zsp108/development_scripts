@@ -29,10 +29,11 @@ function install_go(){
         fi
     fi
 
-    # rm -rf $download_dir/go$go_version.linux-amd64.tar.gz $HOME/go/go$go_version # clean up
+    rm -rf $download_dir/go$go_version.linux-amd64.tar.gz $HOME/go/go$go_version # clean up
 
     # 下载 go$go_version 版本的 Go 安装包
-    # wget -P $download_dir https://golang.google.cn/dl/go$go_version.linux-amd64.tar.gz 
+    wget -P $download_dir https://golang.google.cn/dl/go$go_version.linux-amd64.tar.gz
+    
 
     # 安装 Go
     mkdir -p $HOME/go
