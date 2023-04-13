@@ -47,7 +47,7 @@ install_git(){
     fi
 
     #安装git 编译需要的依赖
-    case $OSTYPE in
+    case $OSNAME in
         'redhat')
             yum update -y
             yum install -y wget make autoconf automake cmake perl-CPAN libcurl-devel libtool gcc gcc-c++ glibc-headers zlib-devel telnet ctags lrzsz jq expat-devel openssl-devel
@@ -120,8 +120,9 @@ setting_git(){
     
     
     #安装lfs
-    case $OSTYPE in
+    case $OSNAME in
         'redhat')
+	    yum install epel-release.noarch -y
             yum update -y
             yum install -y git-lfs
             ;;
@@ -139,6 +140,8 @@ setting_git(){
     git lfs install --skip-repo
   }
 
+#获取系统类型
+get_ostype
 # 执行git 安装
 install_git
 
