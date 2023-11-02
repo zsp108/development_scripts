@@ -6,3 +6,11 @@
 command -v clang-format-10
 ```
 
+
+# Quick Start
+
+```shell
+./start.sh
+
+## Enter the name of the step you want to run
+```
