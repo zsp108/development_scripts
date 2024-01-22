@@ -28,7 +28,7 @@ function get_cputype(){
     if [[ "$cpu_type"=="aarch64" ]];then
         CPUTYPE=$cpu_type
     else
-        CPUTYPE="x86_64"
+        CPUTYPE="amd64"
     fi
 }
 
