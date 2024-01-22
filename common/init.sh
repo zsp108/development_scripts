@@ -22,6 +22,16 @@ function get_ostype() {
     # echo "$OSNAME"
 }
 
+function get_cputype(){
+    declare -g CPUTYPE
+    cpu_type=`lscpu |grep Architecture |awk '{print $2}'`
+    if [[ "$cpu_type"=="aarch64" ]];then
+        CPUTYPE=$cpu_type
+    else
+        CPUTYPE="x86_64"
+    fi
+}
+
 
 #获取sudo 权限，export LINUX_PASSWORD=""
 function common_sudo() {
