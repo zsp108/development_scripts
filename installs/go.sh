@@ -32,6 +32,10 @@ function install_go(){
     rm -rf $download_dir/go$go_version.linux-amd64.tar.gz $HOME/go/go$go_version # clean up
 
     # 下载 go$go_version 版本的 Go 安装包
+    cpu_type="amd64"
+    if [[ "$CPUTYPE"=="aarch64" ]];then
+        cpu_type=$CPUTYPE
+    fi
     wget -P $download_dir https://golang.google.cn/dl/go$go_version.linux-amd64.tar.gz
     
 
