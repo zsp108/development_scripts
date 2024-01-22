@@ -34,14 +34,14 @@ function install_go(){
     # 下载 go$go_version 版本的 Go 安装包
     cpu_type="amd64"
     if [[ "$CPUTYPE"=="aarch64" ]];then
-        cpu_type=$CPUTYPE
+        cpu_type="aarch64"
     fi
     wget -P $download_dir https://golang.google.cn/dl/go$go_version.linux-$cpu_type.tar.gz
     
 
     # 安装 Go
     mkdir -p $HOME/go
-    tar -xvzf $download_dir/go$go_version.linux-amd64.tar.gz -C $HOME/go
+    tar -xvzf $download_dir/go$go_version.linux-$cpu_type.tar.gz -C $HOME/go
     mv $HOME/go/go $HOME/go/go$go_version
 
     # 配置 Go 环境变量
