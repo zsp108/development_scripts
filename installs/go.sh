@@ -36,7 +36,7 @@ function install_go(){
     if [[ "$CPUTYPE"=="aarch64" ]];then
         cpu_type=$CPUTYPE
     fi
-    wget -P $download_dir https://golang.google.cn/dl/go$go_version.linux-amd64.tar.gz
+    wget -P $download_dir https://golang.google.cn/dl/go$go_version.linux-$cpu_type.tar.gz
     
 
     # 安装 Go
