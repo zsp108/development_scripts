@@ -24,12 +24,12 @@ function get_ostype() {
 
 function get_cputype(){
     declare -g CPUTYPE
-    cpu_type=`lscpu |grep Architecture |awk '{print $2}'`
-    if [[ "$cpu_type"=="aarch64" ]];then
-        CPUTYPE=$cpu_type
-    else
-        CPUTYPE="amd64"
-    fi
+    CPUTYPE=`lscpu |grep Architecture |awk '{print $2}'`
+    # if [[ "$cpu_type"=="aarch64" ]];then
+    #     CPUTYPE=$cpu_type
+    # else
+    #     CPUTYPE="amd64"
+    # fi
 }
 
 
