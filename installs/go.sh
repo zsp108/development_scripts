@@ -12,9 +12,9 @@ download_dir=/tmp
 
 function install_go(){
 
-    read -p "请输入需要安装的go版本(默认为1.18.3)：" go_version
+    read -p "请输入需要安装的go版本(默认为1.23.2)：" go_version
     if [ ! $go_version ];then
-        go_version=1.18.3
+        go_version=1.23.2
     fi
 
     if [ `command -v go` ];then
